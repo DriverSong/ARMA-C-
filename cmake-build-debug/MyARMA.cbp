@@ -84,10 +84,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/qiujiawei/CLionProjects/MyARMA/AR.cpp">
+			<Option target="MyARMA"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/CLionProjects/MyARMA/AR.h">
+			<Option target="MyARMA"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/CLionProjects/MyARMA/ARMA.cpp">
+			<Option target="MyARMA"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/CLionProjects/MyARMA/ARMA.h">
+			<Option target="MyARMA"/>
+		</Unit>
 		<Unit filename="/home/qiujiawei/CLionProjects/MyARMA/ARMACore.cpp">
 			<Option target="MyARMA"/>
 		</Unit>
 		<Unit filename="/home/qiujiawei/CLionProjects/MyARMA/ARMACore.h">
+			<Option target="MyARMA"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/CLionProjects/MyARMA/MA.cpp">
+			<Option target="MyARMA"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/CLionProjects/MyARMA/MA.h">
 			<Option target="MyARMA"/>
 		</Unit>
 		<Unit filename="/home/qiujiawei/CLionProjects/MyARMA/main.cpp">

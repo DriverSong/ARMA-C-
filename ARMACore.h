@@ -24,7 +24,8 @@ public:
     std::vector<double> MACoe(std::vector<double> array, int q);
     std::vector<double> ARMACoe(std::vector<double> array, int p, int q);
 
-    double AIC(std::vector<std::vector<double>> coe, std::vector<double> array, int type);
+    double calculateAIC(std::vector<double> array, std::vector<std::vector<double>> Coe, int flag);
+
 
 };
 

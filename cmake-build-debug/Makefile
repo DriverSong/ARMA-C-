@@ -123,6 +123,60 @@ MyARMA/fast:
 	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/build
 .PHONY : MyARMA/fast
 
+AR.o: AR.cpp.o
+
+.PHONY : AR.o
+
+# target to build an object file
+AR.cpp.o:
+	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/AR.cpp.o
+.PHONY : AR.cpp.o
+
+AR.i: AR.cpp.i
+
+.PHONY : AR.i
+
+# target to preprocess a source file
+AR.cpp.i:
+	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/AR.cpp.i
+.PHONY : AR.cpp.i
+
+AR.s: AR.cpp.s
+
+.PHONY : AR.s
+
+# target to generate assembly for a file
+AR.cpp.s:
+	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/AR.cpp.s
+.PHONY : AR.cpp.s
+
+ARMA.o: ARMA.cpp.o
+
+.PHONY : ARMA.o
+
+# target to build an object file
+ARMA.cpp.o:
+	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/ARMA.cpp.o
+.PHONY : ARMA.cpp.o
+
+ARMA.i: ARMA.cpp.i
+
+.PHONY : ARMA.i
+
+# target to preprocess a source file
+ARMA.cpp.i:
+	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/ARMA.cpp.i
+.PHONY : ARMA.cpp.i
+
+ARMA.s: ARMA.cpp.s
+
+.PHONY : ARMA.s
+
+# target to generate assembly for a file
+ARMA.cpp.s:
+	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/ARMA.cpp.s
+.PHONY : ARMA.cpp.s
+
 ARMACore.o: ARMACore.cpp.o
 
 .PHONY : ARMACore.o
@@ -149,6 +203,33 @@ ARMACore.s: ARMACore.cpp.s
 ARMACore.cpp.s:
 	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/ARMACore.cpp.s
 .PHONY : ARMACore.cpp.s
+
+MA.o: MA.cpp.o
+
+.PHONY : MA.o
+
+# target to build an object file
+MA.cpp.o:
+	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/MA.cpp.o
+.PHONY : MA.cpp.o
+
+MA.i: MA.cpp.i
+
+.PHONY : MA.i
+
+# target to preprocess a source file
+MA.cpp.i:
+	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/MA.cpp.i
+.PHONY : MA.cpp.i
+
+MA.s: MA.cpp.s
+
+.PHONY : MA.s
+
+# target to generate assembly for a file
+MA.cpp.s:
+	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/MA.cpp.s
+.PHONY : MA.cpp.s
 
 main.o: main.cpp.o
 
@@ -186,9 +267,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... MyARMA"
+	@echo "... AR.o"
+	@echo "... AR.i"
+	@echo "... AR.s"
+	@echo "... ARMA.o"
+	@echo "... ARMA.i"
+	@echo "... ARMA.s"
 	@echo "... ARMACore.o"
 	@echo "... ARMACore.i"
 	@echo "... ARMACore.s"
+	@echo "... MA.o"
+	@echo "... MA.i"
+	@echo "... MA.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

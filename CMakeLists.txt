@@ -3,4 +3,4 @@ project(MyARMA)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(MyARMA main.cpp ARMACore.cpp ARMACore.h)
+add_executable(MyARMA main.cpp ARMACore.cpp ARMACore.h AR.cpp AR.h MA.cpp MA.h ARMA.cpp ARMA.h)

@@ -105,19 +105,97 @@ CMakeFiles/MyARMA.dir/ARMACore.cpp.o.provides: CMakeFiles/MyARMA.dir/ARMACore.cp
 CMakeFiles/MyARMA.dir/ARMACore.cpp.o.provides.build: CMakeFiles/MyARMA.dir/ARMACore.cpp.o
 
 
+CMakeFiles/MyARMA.dir/AR.cpp.o: CMakeFiles/MyARMA.dir/flags.make
+CMakeFiles/MyARMA.dir/AR.cpp.o: ../AR.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/CLionProjects/MyARMA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MyARMA.dir/AR.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyARMA.dir/AR.cpp.o -c /home/qiujiawei/CLionProjects/MyARMA/AR.cpp
+
+CMakeFiles/MyARMA.dir/AR.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyARMA.dir/AR.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/CLionProjects/MyARMA/AR.cpp > CMakeFiles/MyARMA.dir/AR.cpp.i
+
+CMakeFiles/MyARMA.dir/AR.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyARMA.dir/AR.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/CLionProjects/MyARMA/AR.cpp -o CMakeFiles/MyARMA.dir/AR.cpp.s
+
+CMakeFiles/MyARMA.dir/AR.cpp.o.requires:
+
+.PHONY : CMakeFiles/MyARMA.dir/AR.cpp.o.requires
+
+CMakeFiles/MyARMA.dir/AR.cpp.o.provides: CMakeFiles/MyARMA.dir/AR.cpp.o.requires
+	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/AR.cpp.o.provides.build
+.PHONY : CMakeFiles/MyARMA.dir/AR.cpp.o.provides
+
+CMakeFiles/MyARMA.dir/AR.cpp.o.provides.build: CMakeFiles/MyARMA.dir/AR.cpp.o
+
+
+CMakeFiles/MyARMA.dir/MA.cpp.o: CMakeFiles/MyARMA.dir/flags.make
+CMakeFiles/MyARMA.dir/MA.cpp.o: ../MA.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/CLionProjects/MyARMA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MyARMA.dir/MA.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyARMA.dir/MA.cpp.o -c /home/qiujiawei/CLionProjects/MyARMA/MA.cpp
+
+CMakeFiles/MyARMA.dir/MA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyARMA.dir/MA.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/CLionProjects/MyARMA/MA.cpp > CMakeFiles/MyARMA.dir/MA.cpp.i
+
+CMakeFiles/MyARMA.dir/MA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyARMA.dir/MA.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/CLionProjects/MyARMA/MA.cpp -o CMakeFiles/MyARMA.dir/MA.cpp.s
+
+CMakeFiles/MyARMA.dir/MA.cpp.o.requires:
+
+.PHONY : CMakeFiles/MyARMA.dir/MA.cpp.o.requires
+
+CMakeFiles/MyARMA.dir/MA.cpp.o.provides: CMakeFiles/MyARMA.dir/MA.cpp.o.requires
+	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/MA.cpp.o.provides.build
+.PHONY : CMakeFiles/MyARMA.dir/MA.cpp.o.provides
+
+CMakeFiles/MyARMA.dir/MA.cpp.o.provides.build: CMakeFiles/MyARMA.dir/MA.cpp.o
+
+
+CMakeFiles/MyARMA.dir/ARMA.cpp.o: CMakeFiles/MyARMA.dir/flags.make
+CMakeFiles/MyARMA.dir/ARMA.cpp.o: ../ARMA.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/CLionProjects/MyARMA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MyARMA.dir/ARMA.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyARMA.dir/ARMA.cpp.o -c /home/qiujiawei/CLionProjects/MyARMA/ARMA.cpp
+
+CMakeFiles/MyARMA.dir/ARMA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyARMA.dir/ARMA.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/CLionProjects/MyARMA/ARMA.cpp > CMakeFiles/MyARMA.dir/ARMA.cpp.i
+
+CMakeFiles/MyARMA.dir/ARMA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyARMA.dir/ARMA.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/CLionProjects/MyARMA/ARMA.cpp -o CMakeFiles/MyARMA.dir/ARMA.cpp.s
+
+CMakeFiles/MyARMA.dir/ARMA.cpp.o.requires:
+
+.PHONY : CMakeFiles/MyARMA.dir/ARMA.cpp.o.requires
+
+CMakeFiles/MyARMA.dir/ARMA.cpp.o.provides: CMakeFiles/MyARMA.dir/ARMA.cpp.o.requires
+	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/ARMA.cpp.o.provides.build
+.PHONY : CMakeFiles/MyARMA.dir/ARMA.cpp.o.provides
+
+CMakeFiles/MyARMA.dir/ARMA.cpp.o.provides.build: CMakeFiles/MyARMA.dir/ARMA.cpp.o
+
+
 # Object files for target MyARMA
 MyARMA_OBJECTS = \
 "CMakeFiles/MyARMA.dir/main.cpp.o" \
-"CMakeFiles/MyARMA.dir/ARMACore.cpp.o"
+"CMakeFiles/MyARMA.dir/ARMACore.cpp.o" \
+"CMakeFiles/MyARMA.dir/AR.cpp.o" \
+"CMakeFiles/MyARMA.dir/MA.cpp.o" \
+"CMakeFiles/MyARMA.dir/ARMA.cpp.o"
 
 # External object files for target MyARMA
 MyARMA_EXTERNAL_OBJECTS =
 
 MyARMA: CMakeFiles/MyARMA.dir/main.cpp.o
 MyARMA: CMakeFiles/MyARMA.dir/ARMACore.cpp.o
+MyARMA: CMakeFiles/MyARMA.dir/AR.cpp.o
+MyARMA: CMakeFiles/MyARMA.dir/MA.cpp.o
+MyARMA: CMakeFiles/MyARMA.dir/ARMA.cpp.o
 MyARMA: CMakeFiles/MyARMA.dir/build.make
 MyARMA: CMakeFiles/MyARMA.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/qiujiawei/CLionProjects/MyARMA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable MyARMA"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/qiujiawei/CLionProjects/MyARMA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable MyARMA"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyARMA.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -127,6 +205,9 @@ CMakeFiles/MyARMA.dir/build: MyARMA
 
 CMakeFiles/MyARMA.dir/requires: CMakeFiles/MyARMA.dir/main.cpp.o.requires
 CMakeFiles/MyARMA.dir/requires: CMakeFiles/MyARMA.dir/ARMACore.cpp.o.requires
+CMakeFiles/MyARMA.dir/requires: CMakeFiles/MyARMA.dir/AR.cpp.o.requires
+CMakeFiles/MyARMA.dir/requires: CMakeFiles/MyARMA.dir/MA.cpp.o.requires
+CMakeFiles/MyARMA.dir/requires: CMakeFiles/MyARMA.dir/ARMA.cpp.o.requires
 
 .PHONY : CMakeFiles/MyARMA.dir/requires
 
