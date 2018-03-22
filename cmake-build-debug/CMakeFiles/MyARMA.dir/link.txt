@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/MyARMA.dir/main.cpp.o CMakeFiles/MyARMA.dir/ARMACore.cpp.o  -o MyARMA 
