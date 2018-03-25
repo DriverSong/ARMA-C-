@@ -4,10 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/qiujiawei/CLionProjects/MyARMA/AR.cpp" "/home/qiujiawei/CLionProjects/MyARMA/cmake-build-debug/CMakeFiles/MyARMA.dir/AR.cpp.o"
-  "/home/qiujiawei/CLionProjects/MyARMA/ARMA.cpp" "/home/qiujiawei/CLionProjects/MyARMA/cmake-build-debug/CMakeFiles/MyARMA.dir/ARMA.cpp.o"
   "/home/qiujiawei/CLionProjects/MyARMA/ARMACore.cpp" "/home/qiujiawei/CLionProjects/MyARMA/cmake-build-debug/CMakeFiles/MyARMA.dir/ARMACore.cpp.o"
-  "/home/qiujiawei/CLionProjects/MyARMA/MA.cpp" "/home/qiujiawei/CLionProjects/MyARMA/cmake-build-debug/CMakeFiles/MyARMA.dir/MA.cpp.o"
+  "/home/qiujiawei/CLionProjects/MyARMA/Control.cpp" "/home/qiujiawei/CLionProjects/MyARMA/cmake-build-debug/CMakeFiles/MyARMA.dir/Control.cpp.o"
+  "/home/qiujiawei/CLionProjects/MyARMA/Predict.cpp" "/home/qiujiawei/CLionProjects/MyARMA/cmake-build-debug/CMakeFiles/MyARMA.dir/Predict.cpp.o"
   "/home/qiujiawei/CLionProjects/MyARMA/main.cpp" "/home/qiujiawei/CLionProjects/MyARMA/cmake-build-debug/CMakeFiles/MyARMA.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

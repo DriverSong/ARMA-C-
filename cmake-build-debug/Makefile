@@ -123,60 +123,6 @@ MyARMA/fast:
 	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/build
 .PHONY : MyARMA/fast
 
-AR.o: AR.cpp.o
-
-.PHONY : AR.o
-
-# target to build an object file
-AR.cpp.o:
-	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/AR.cpp.o
-.PHONY : AR.cpp.o
-
-AR.i: AR.cpp.i
-
-.PHONY : AR.i
-
-# target to preprocess a source file
-AR.cpp.i:
-	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/AR.cpp.i
-.PHONY : AR.cpp.i
-
-AR.s: AR.cpp.s
-
-.PHONY : AR.s
-
-# target to generate assembly for a file
-AR.cpp.s:
-	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/AR.cpp.s
-.PHONY : AR.cpp.s
-
-ARMA.o: ARMA.cpp.o
-
-.PHONY : ARMA.o
-
-# target to build an object file
-ARMA.cpp.o:
-	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/ARMA.cpp.o
-.PHONY : ARMA.cpp.o
-
-ARMA.i: ARMA.cpp.i
-
-.PHONY : ARMA.i
-
-# target to preprocess a source file
-ARMA.cpp.i:
-	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/ARMA.cpp.i
-.PHONY : ARMA.cpp.i
-
-ARMA.s: ARMA.cpp.s
-
-.PHONY : ARMA.s
-
-# target to generate assembly for a file
-ARMA.cpp.s:
-	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/ARMA.cpp.s
-.PHONY : ARMA.cpp.s
-
 ARMACore.o: ARMACore.cpp.o
 
 .PHONY : ARMACore.o
@@ -204,32 +150,59 @@ ARMACore.cpp.s:
 	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/ARMACore.cpp.s
 .PHONY : ARMACore.cpp.s
 
-MA.o: MA.cpp.o
+Control.o: Control.cpp.o
 
-.PHONY : MA.o
+.PHONY : Control.o
 
 # target to build an object file
-MA.cpp.o:
-	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/MA.cpp.o
-.PHONY : MA.cpp.o
+Control.cpp.o:
+	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/Control.cpp.o
+.PHONY : Control.cpp.o
 
-MA.i: MA.cpp.i
+Control.i: Control.cpp.i
 
-.PHONY : MA.i
+.PHONY : Control.i
 
 # target to preprocess a source file
-MA.cpp.i:
-	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/MA.cpp.i
-.PHONY : MA.cpp.i
+Control.cpp.i:
+	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/Control.cpp.i
+.PHONY : Control.cpp.i
 
-MA.s: MA.cpp.s
+Control.s: Control.cpp.s
 
-.PHONY : MA.s
+.PHONY : Control.s
 
 # target to generate assembly for a file
-MA.cpp.s:
-	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/MA.cpp.s
-.PHONY : MA.cpp.s
+Control.cpp.s:
+	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/Control.cpp.s
+.PHONY : Control.cpp.s
+
+Predict.o: Predict.cpp.o
+
+.PHONY : Predict.o
+
+# target to build an object file
+Predict.cpp.o:
+	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/Predict.cpp.o
+.PHONY : Predict.cpp.o
+
+Predict.i: Predict.cpp.i
+
+.PHONY : Predict.i
+
+# target to preprocess a source file
+Predict.cpp.i:
+	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/Predict.cpp.i
+.PHONY : Predict.cpp.i
+
+Predict.s: Predict.cpp.s
+
+.PHONY : Predict.s
+
+# target to generate assembly for a file
+Predict.cpp.s:
+	$(MAKE) -f CMakeFiles/MyARMA.dir/build.make CMakeFiles/MyARMA.dir/Predict.cpp.s
+.PHONY : Predict.cpp.s
 
 main.o: main.cpp.o
 
@@ -267,18 +240,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... MyARMA"
-	@echo "... AR.o"
-	@echo "... AR.i"
-	@echo "... AR.s"
-	@echo "... ARMA.o"
-	@echo "... ARMA.i"
-	@echo "... ARMA.s"
 	@echo "... ARMACore.o"
 	@echo "... ARMACore.i"
 	@echo "... ARMACore.s"
-	@echo "... MA.o"
-	@echo "... MA.i"
-	@echo "... MA.s"
+	@echo "... Control.o"
+	@echo "... Control.i"
+	@echo "... Control.s"
+	@echo "... Predict.o"
+	@echo "... Predict.i"
+	@echo "... Predict.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

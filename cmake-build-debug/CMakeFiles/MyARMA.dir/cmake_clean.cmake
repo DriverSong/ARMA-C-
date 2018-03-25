@@ -1,9 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MyARMA.dir/main.cpp.o"
   "CMakeFiles/MyARMA.dir/ARMACore.cpp.o"
-  "CMakeFiles/MyARMA.dir/AR.cpp.o"
-  "CMakeFiles/MyARMA.dir/MA.cpp.o"
-  "CMakeFiles/MyARMA.dir/ARMA.cpp.o"
+  "CMakeFiles/MyARMA.dir/Predict.cpp.o"
+  "CMakeFiles/MyARMA.dir/Control.cpp.o"
   "MyARMA.pdb"
   "MyARMA"
 )

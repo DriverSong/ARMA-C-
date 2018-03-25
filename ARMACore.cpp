@@ -176,7 +176,7 @@ std::vector<double> ARMACore::ARMACoe(std::vector<double> array, int p, int q) {
     for(int i = 1; i < ARCoe.size(); i++){
         delt -= ARCoe[i];
     }
-    ARCoe[0] = arrayAvg*delt;
+    ARCoe[0] = arrayAvg*delt;//[c,1,2,...,p]
 
 //    std::vector<double> ARCov(p);//Cov[q+1,q+2,...,q+p]
 //    std::vector<std::vector<double>> matrixCov;
@@ -232,7 +232,7 @@ std::vector<double> ARMACore::ARMACoe(std::vector<double> array, int p, int q) {
             ARMACoe[i] = MACoe[i - ARCoe.size()];
         }
     }
-    return ARMACoe;//[var,1,2,...,p,var,1,2,...,q]
+    return ARMACoe;//[c,1,2,...,p,var,1,2,...,q]
 }
 
 
