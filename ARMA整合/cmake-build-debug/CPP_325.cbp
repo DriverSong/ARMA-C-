@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="CPP_325"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CPP_325">
+				<Option output="/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/CPP_325" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/Makefile&quot;  VERBOSE=1 CPP_325"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CPP_325/fast">
+				<Option output="/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/CPP_325" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/Makefile&quot;  VERBOSE=1 CPP_325/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/AR.h">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/ARMA.h">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/ARMACore.cpp">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/ARMACore.h">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/Control.cpp">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/Control.h">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/Date.cpp">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/Date.h">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/MA.h">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/TreeNode.cpp">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/TreeNode.h">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/distribution.cpp">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/distribution.h">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/ecs.cpp">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/io.cpp">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/knapsack.cpp">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/knapsack.h">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/lib/lib_io.h">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/lib/lib_time.h">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/predict.cpp">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/predict.h">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/prediction.cpp">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/prediction.h">
+			<Option target="CPP_325"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/huaweiruantiao/CPP_325/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
