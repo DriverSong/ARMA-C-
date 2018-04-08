@@ -106,6 +106,12 @@
 		<Unit filename="/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/Date.h">
 			<Option target="ecs"/>
 		</Unit>
+		<Unit filename="/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/SA.cpp">
+			<Option target="ecs"/>
+		</Unit>
+		<Unit filename="/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/SA.h">
+			<Option target="ecs"/>
+		</Unit>
 		<Unit filename="/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/TreeNode.cpp">
 			<Option target="ecs"/>
 		</Unit>

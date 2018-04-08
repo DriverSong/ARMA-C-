@@ -100,7 +100,7 @@ SA::SA(double startT, double endT, double r, int sumCPU, int sumMEM, int numFla,
     this->score = this->calculateScore(this->res);
 }
 
-void SA::calculate(){
+std::vector<std::vector<int>> SA::calculate(){
     double T = this->startT;
     while(T > this->endT){
         std::vector<int> newFlaSeries = this->newFlaSeries();
@@ -117,4 +117,5 @@ void SA::calculate(){
         }
         T = T * this->r;
     }
+    return this->res;
 }

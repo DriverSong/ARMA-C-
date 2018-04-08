@@ -204,6 +204,33 @@ sdk-gcc/ecs/Date.cpp.s:
 	$(MAKE) -f CMakeFiles/ecs.dir/build.make CMakeFiles/ecs.dir/sdk-gcc/ecs/Date.cpp.s
 .PHONY : sdk-gcc/ecs/Date.cpp.s
 
+sdk-gcc/ecs/SA.o: sdk-gcc/ecs/SA.cpp.o
+
+.PHONY : sdk-gcc/ecs/SA.o
+
+# target to build an object file
+sdk-gcc/ecs/SA.cpp.o:
+	$(MAKE) -f CMakeFiles/ecs.dir/build.make CMakeFiles/ecs.dir/sdk-gcc/ecs/SA.cpp.o
+.PHONY : sdk-gcc/ecs/SA.cpp.o
+
+sdk-gcc/ecs/SA.i: sdk-gcc/ecs/SA.cpp.i
+
+.PHONY : sdk-gcc/ecs/SA.i
+
+# target to preprocess a source file
+sdk-gcc/ecs/SA.cpp.i:
+	$(MAKE) -f CMakeFiles/ecs.dir/build.make CMakeFiles/ecs.dir/sdk-gcc/ecs/SA.cpp.i
+.PHONY : sdk-gcc/ecs/SA.cpp.i
+
+sdk-gcc/ecs/SA.s: sdk-gcc/ecs/SA.cpp.s
+
+.PHONY : sdk-gcc/ecs/SA.s
+
+# target to generate assembly for a file
+sdk-gcc/ecs/SA.cpp.s:
+	$(MAKE) -f CMakeFiles/ecs.dir/build.make CMakeFiles/ecs.dir/sdk-gcc/ecs/SA.cpp.s
+.PHONY : sdk-gcc/ecs/SA.cpp.s
+
 sdk-gcc/ecs/TreeNode.o: sdk-gcc/ecs/TreeNode.cpp.o
 
 .PHONY : sdk-gcc/ecs/TreeNode.o
@@ -411,6 +438,9 @@ help:
 	@echo "... sdk-gcc/ecs/Date.o"
 	@echo "... sdk-gcc/ecs/Date.i"
 	@echo "... sdk-gcc/ecs/Date.s"
+	@echo "... sdk-gcc/ecs/SA.o"
+	@echo "... sdk-gcc/ecs/SA.i"
+	@echo "... sdk-gcc/ecs/SA.s"
 	@echo "... sdk-gcc/ecs/TreeNode.o"
 	@echo "... sdk-gcc/ecs/TreeNode.i"
 	@echo "... sdk-gcc/ecs/TreeNode.s"

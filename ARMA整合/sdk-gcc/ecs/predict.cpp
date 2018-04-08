@@ -10,6 +10,7 @@
 
 #define MAX_PERIOD 30
 #include "Date.h"
+#include "SA.h"
 
 //你要完成的功能总入口
 void predict_server(char * info[MAX_INFO_NUM], char * data[MAX_DATA_NUM], int data_num, char * filename)
@@ -26,10 +27,10 @@ void predict_server(char * info[MAX_INFO_NUM], char * data[MAX_DATA_NUM], int da
 
 	std::map<std::string, int> mapFlaIndx;		// Flavor名map
 	std::string arrFlaName[MAX_FLAVOR];			// Flavor名数组
-	int arrFlaCPU[MAX_FLAVOR];					// 各Flavor对应CPU核数数组
-	int arrFlaMEM[MAX_FLAVOR];					// 各Flavor对应内存数组
-	int arrFlaPre[MAX_FLAVOR];				// 各Flavor预测结果
-	int res[MAX_PHY][MAX_FLAVOR];				// 分配结果数组
+	int arrFlaCPU[MAX_FLAVOR] = {0,};					// 各Flavor对应CPU核数数组
+	int arrFlaMEM[MAX_FLAVOR] = {0,};					// 各Flavor对应内存数组
+	int arrFlaPre[MAX_FLAVOR] = {0,};				// 各Flavor预测结果
+//	int res[MAX_PHY][MAX_FLAVOR];				// 分配结果数组
 
 	// 读取info
 	ss << info[0];
@@ -100,11 +101,21 @@ void predict_server(char * info[MAX_INFO_NUM], char * data[MAX_DATA_NUM], int da
 		numFlaValid += arrFlaPre[i];
 
 
-	// 分配
-	for (int i = 0; i < MAX_PHY; i++)
-		for (int j = 0; j < numFla; j++)
-			res[i][j] = 0;
-	numPHY = distribution(sumCPU, sumMEM, numFla, target, arrFlaCPU, arrFlaMEM, arrFlaPre, res);
+//	// 分配
+//	for (int i = 0; i < MAX_PHY; i++)
+//		for (int j = 0; j < numFla; j++)
+//			res[i][j] = 0;
+//	numPHY = distribution(sumCPU, sumMEM, numFla, target, arrFlaCPU, arrFlaMEM, arrFlaPre, res);
+
+
+	double startT = 100.0;
+	double endT = 1.0;
+	double r = 0.9999;
+	SA SAModel = SA(startT, endT, r, sumCPU, sumMEM, numFla, target, arrFlaCPU, arrFlaMEM, arrFlaPre);
+	std::vector<std::vector<int>> res = SAModel.calculate();
+
+	numPHY = res.size();
+
 
 	// 输出结果
 	//ss << numFlaValid << std::endl;

@@ -38,7 +38,7 @@ public:
     SA(double startT, double endT, double r, int sumCPU, int sumMEM, int numFla, std::string target,
        int* vecFlaCPU, int* vecFlaMEM, int* vecFlaPre);
 
-    void calculate();
+    std::vector<std::vector<int>> calculate();
 
 
 };

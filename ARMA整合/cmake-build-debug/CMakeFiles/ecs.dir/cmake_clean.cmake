@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ecs.dir/sdk-gcc/ecs/ARMACore.cpp.o"
   "CMakeFiles/ecs.dir/sdk-gcc/ecs/Control.cpp.o"
   "CMakeFiles/ecs.dir/sdk-gcc/ecs/Date.cpp.o"
+  "CMakeFiles/ecs.dir/sdk-gcc/ecs/SA.cpp.o"
   "CMakeFiles/ecs.dir/sdk-gcc/ecs/TreeNode.cpp.o"
   "CMakeFiles/ecs.dir/sdk-gcc/ecs/distribution.cpp.o"
   "CMakeFiles/ecs.dir/sdk-gcc/ecs/ecs.cpp.o"
