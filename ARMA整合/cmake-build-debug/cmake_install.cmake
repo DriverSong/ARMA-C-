@@ -1,4 +1,4 @@
-# Install script for directory: /home/qiujiawei/huaweiruantiao/CPP_325
+# Install script for directory: /home/qiujiawei/CLionProjects/MyARMA/ARMA整合
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

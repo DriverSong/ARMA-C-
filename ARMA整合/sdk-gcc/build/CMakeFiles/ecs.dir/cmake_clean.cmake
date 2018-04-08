@@ -9,8 +9,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/ecs.dir/ecs.cpp.o"
   "CMakeFiles/ecs.dir/Control.cpp.o"
   "CMakeFiles/ecs.dir/distribution.cpp.o"
-  "/home/qiujiawei/huaweiruantiao/CPP_325/bin/ecs.pdb"
-  "/home/qiujiawei/huaweiruantiao/CPP_325/bin/ecs"
+  "/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/bin/ecs.pdb"
+  "/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/bin/ecs"
 )
 
 # Per-language clean rules from dependency scanning.

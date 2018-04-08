@@ -35,28 +35,6 @@ public:
         aic = ma.calculateAIC(this->array,this->vec, 1);
         return aic;
     }
-
-    std::vector<double> predictSum(int count){
-        int size = this->array.size();
-        std::vector<double> MACoe = this->vec[0];
-        std::vector<double> predict(count);
-        double var = MACoe[0];
-        double avg = MACoe[1];
-        int errLength = count + this->q;
-        std::vector<double> errData(errLength);
-
-        for(int i = 0; i < errLength; i++){
-            errData[i] = std::sqrt(var) * gaussrand();
-        }
-
-        for(int i = 0; i < count; i ++){
-            predict[i] = errData[this->q + i] + avg;
-            for(int j = 0; j < this->q; j++){
-                predict[i] += errData[this->q + i - 1 - j] * MACoe[3 + j];
-            }
-        }
-        return predict;
-    }
 };
 
 

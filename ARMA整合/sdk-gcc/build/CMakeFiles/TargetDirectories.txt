@@ -1,1 +1,1 @@
-/home/qiujiawei/huaweiruantiao/CPP_325/build/CMakeFiles/ecs.dir
+/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/build/CMakeFiles/ecs.dir

@@ -10,7 +10,7 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/2.8.12.2/CMakeCCompiler.cmake"
   "CMakeFiles/2.8.12.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/2.8.12.2/CMakeSystem.cmake"
-  "/home/qiujiawei/huaweiruantiao/CPP_325/ecs/CMakeLists.txt"
+  "/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/CMakeLists.txt"
   "/usr/share/cmake-2.8/Modules/CMakeCCompiler.cmake.in"
   "/usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c"
   "/usr/share/cmake-2.8/Modules/CMakeCInformation.cmake"

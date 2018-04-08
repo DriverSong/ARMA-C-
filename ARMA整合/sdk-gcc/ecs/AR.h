@@ -36,23 +36,6 @@ public:
         aic = ar.calculateAIC(this->array, this->vec, 0);
         return aic;
     }
-
-    std::vector<double> predictSum(int count){
-        //[var,a[1,2,...,order]]
-        double var = this->vec[0][0];
-        std::vector<double> predict(count);
-        std::vector<double> arrayTemp(this->array);
-        for(int i = 0; i< count; i++){
-            int size = arrayTemp.size();
-            predict[i] = std::sqrt(var) * gaussrand();
-            for(int j = 0; j < this->p; j++){
-                predict[i] += arrayTemp[size - 1 - j] * this->vec[0][j];
-            }
-            arrayTemp.push_back(predict[i]);
-        }
-
-        return predict;
-    }
 };
 
 

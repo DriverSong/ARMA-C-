@@ -3,28 +3,70 @@
 //
 #include <cmath>
 #include "ARMA.h"
+#include "MA.h"
+#include "AR.h"
 #include <iostream>
 #include "Control.h"
 
-std::vector<int> predictByAIC(std::vector<double> array, int maxP, int maxQ) {
+std::vector<int> predictByAIC(std::vector<double> array, int maxP, int maxQ, int maxPQ, std::vector<std::vector<int>> usedPQ , int flag0) {
     int p = 0;
     int q = 0;
     std::vector<int> bestModel(2);
     double minAIC = 1.7976931348623157E308;
-    if(maxP == 0 && maxQ == 0){
-        std::cout << "p and p cannot be both zero!" << std::endl;
+    if(maxPQ == 0){
+        if(maxP == 0 && maxQ == 0){
+            std::cout << "p and p cannot be both zero!" << std::endl;
+        } else{
+            for(int i = 0; i <= maxP; i++){
+                for(int j = 0; j <= maxQ; j++){
+                    int flag = 1;
+                    if(flag0 != 0){
+                        for(int k = 0; k < usedPQ.size(); k++){
+                            if(i == usedPQ[k][0] && j == usedPQ[k][1]){
+                                flag = 0;
+                                break;
+                            }
+                        }
+                    }
+                    if(flag){
+                        if(i == 0 && j == 0)continue;
+                        double AIC;
+                        ARMA arma(array, i, j);
+                        arma.calculateARMACoe();
+                        AIC = arma.calculateAIC();
+                        if( AIC <= minAIC){
+                            minAIC = AIC;
+                            p = i;
+                            q = j;
+                        }
+                    }
+                }
+            }
+        }
     } else{
-        for(int i = 0; i <= maxP; i++){
-            for(int j = 0; j <= maxQ; j++){
-                if(i == 0 && j == 0)continue;
-                ARMA arma(array, i, j);
-                arma.calculateARMACoe();
-                double AIC = arma.calculateAIC();
-//                std::cout << AIC <<std::endl;
-                if( AIC <= minAIC){
-                    minAIC = AIC;
-                    p = i;
-                    q = j;
+        for(int i = 0; i <= maxPQ; i++){
+            for(int j = 0; j <= maxPQ - i; j++){
+                if(i == 0 && j == 0) continue;
+                int flag = 1;
+                if(flag0 != 0){
+                    for(int k = 0; k < usedPQ.size(); k++){
+                        if(i == usedPQ[k][0] && j == usedPQ[k][1]){
+                            flag = 0;
+                            break;
+                        }
+                    }
+                }
+                if(flag){
+                    if(i == 0 && j == 0)continue;
+                    double AIC;
+                    ARMA arma(array, i, j);
+                    arma.calculateARMACoe();
+                    AIC = arma.calculateAIC();
+                    if( AIC <= minAIC){
+                        minAIC = AIC;
+                        p = i;
+                        q = j;
+                    }
                 }
             }
         }
@@ -54,7 +96,7 @@ std::vector<double> contrastDiff(std::vector<double> array, int gap){
     return arrayReturn;
 }
 
-double gaussrand(){
+double gaussrand1(){
     static double V1, V2, S;
     static int phase = 0;
     double X;

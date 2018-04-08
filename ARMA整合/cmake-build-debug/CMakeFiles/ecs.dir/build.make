@@ -43,10 +43,10 @@ RM = /home/qiujiawei/Clion/clion-2017.3.4/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/qiujiawei/huaweiruantiao/CPP_325
+CMAKE_SOURCE_DIR = /home/qiujiawei/CLionProjects/MyARMA/ARMA整合
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug
+CMAKE_BINARY_DIR = /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ecs.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/ecs.dir/flags.make
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/ARMACore.cpp.o: CMakeFiles/ecs.dir/flags.make
 CMakeFiles/ecs.dir/sdk-gcc/ecs/ARMACore.cpp.o: ../sdk-gcc/ecs/ARMACore.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ecs.dir/sdk-gcc/ecs/ARMACore.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ecs.dir/sdk-gcc/ecs/ARMACore.cpp.o -c /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/ARMACore.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ecs.dir/sdk-gcc/ecs/ARMACore.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ecs.dir/sdk-gcc/ecs/ARMACore.cpp.o -c /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/ARMACore.cpp
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/ARMACore.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ecs.dir/sdk-gcc/ecs/ARMACore.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/ARMACore.cpp > CMakeFiles/ecs.dir/sdk-gcc/ecs/ARMACore.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/ARMACore.cpp > CMakeFiles/ecs.dir/sdk-gcc/ecs/ARMACore.cpp.i
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/ARMACore.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ecs.dir/sdk-gcc/ecs/ARMACore.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/ARMACore.cpp -o CMakeFiles/ecs.dir/sdk-gcc/ecs/ARMACore.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/ARMACore.cpp -o CMakeFiles/ecs.dir/sdk-gcc/ecs/ARMACore.cpp.s
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/ARMACore.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/ecs.dir/sdk-gcc/ecs/ARMACore.cpp.o.provides.build: CMakeFiles/ecs.dir
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/Control.cpp.o: CMakeFiles/ecs.dir/flags.make
 CMakeFiles/ecs.dir/sdk-gcc/ecs/Control.cpp.o: ../sdk-gcc/ecs/Control.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ecs.dir/sdk-gcc/ecs/Control.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ecs.dir/sdk-gcc/ecs/Control.cpp.o -c /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/Control.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ecs.dir/sdk-gcc/ecs/Control.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ecs.dir/sdk-gcc/ecs/Control.cpp.o -c /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/Control.cpp
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/Control.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ecs.dir/sdk-gcc/ecs/Control.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/Control.cpp > CMakeFiles/ecs.dir/sdk-gcc/ecs/Control.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/Control.cpp > CMakeFiles/ecs.dir/sdk-gcc/ecs/Control.cpp.i
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/Control.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ecs.dir/sdk-gcc/ecs/Control.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/Control.cpp -o CMakeFiles/ecs.dir/sdk-gcc/ecs/Control.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/Control.cpp -o CMakeFiles/ecs.dir/sdk-gcc/ecs/Control.cpp.s
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/Control.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/ecs.dir/sdk-gcc/ecs/Control.cpp.o.provides.build: CMakeFiles/ecs.dir/
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/Date.cpp.o: CMakeFiles/ecs.dir/flags.make
 CMakeFiles/ecs.dir/sdk-gcc/ecs/Date.cpp.o: ../sdk-gcc/ecs/Date.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ecs.dir/sdk-gcc/ecs/Date.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ecs.dir/sdk-gcc/ecs/Date.cpp.o -c /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/Date.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ecs.dir/sdk-gcc/ecs/Date.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ecs.dir/sdk-gcc/ecs/Date.cpp.o -c /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/Date.cpp
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/Date.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ecs.dir/sdk-gcc/ecs/Date.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/Date.cpp > CMakeFiles/ecs.dir/sdk-gcc/ecs/Date.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/Date.cpp > CMakeFiles/ecs.dir/sdk-gcc/ecs/Date.cpp.i
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/Date.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ecs.dir/sdk-gcc/ecs/Date.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/Date.cpp -o CMakeFiles/ecs.dir/sdk-gcc/ecs/Date.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/Date.cpp -o CMakeFiles/ecs.dir/sdk-gcc/ecs/Date.cpp.s
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/Date.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/ecs.dir/sdk-gcc/ecs/Date.cpp.o.provides.build: CMakeFiles/ecs.dir/sdk
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/TreeNode.cpp.o: CMakeFiles/ecs.dir/flags.make
 CMakeFiles/ecs.dir/sdk-gcc/ecs/TreeNode.cpp.o: ../sdk-gcc/ecs/TreeNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ecs.dir/sdk-gcc/ecs/TreeNode.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ecs.dir/sdk-gcc/ecs/TreeNode.cpp.o -c /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/TreeNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ecs.dir/sdk-gcc/ecs/TreeNode.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ecs.dir/sdk-gcc/ecs/TreeNode.cpp.o -c /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/TreeNode.cpp
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/TreeNode.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ecs.dir/sdk-gcc/ecs/TreeNode.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/TreeNode.cpp > CMakeFiles/ecs.dir/sdk-gcc/ecs/TreeNode.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/TreeNode.cpp > CMakeFiles/ecs.dir/sdk-gcc/ecs/TreeNode.cpp.i
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/TreeNode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ecs.dir/sdk-gcc/ecs/TreeNode.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/TreeNode.cpp -o CMakeFiles/ecs.dir/sdk-gcc/ecs/TreeNode.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/TreeNode.cpp -o CMakeFiles/ecs.dir/sdk-gcc/ecs/TreeNode.cpp.s
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/TreeNode.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/ecs.dir/sdk-gcc/ecs/TreeNode.cpp.o.provides.build: CMakeFiles/ecs.dir
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/distribution.cpp.o: CMakeFiles/ecs.dir/flags.make
 CMakeFiles/ecs.dir/sdk-gcc/ecs/distribution.cpp.o: ../sdk-gcc/ecs/distribution.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ecs.dir/sdk-gcc/ecs/distribution.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ecs.dir/sdk-gcc/ecs/distribution.cpp.o -c /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/distribution.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ecs.dir/sdk-gcc/ecs/distribution.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ecs.dir/sdk-gcc/ecs/distribution.cpp.o -c /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/distribution.cpp
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/distribution.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ecs.dir/sdk-gcc/ecs/distribution.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/distribution.cpp > CMakeFiles/ecs.dir/sdk-gcc/ecs/distribution.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/distribution.cpp > CMakeFiles/ecs.dir/sdk-gcc/ecs/distribution.cpp.i
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/distribution.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ecs.dir/sdk-gcc/ecs/distribution.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/distribution.cpp -o CMakeFiles/ecs.dir/sdk-gcc/ecs/distribution.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/distribution.cpp -o CMakeFiles/ecs.dir/sdk-gcc/ecs/distribution.cpp.s
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/distribution.cpp.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/ecs.dir/sdk-gcc/ecs/distribution.cpp.o.provides.build: CMakeFiles/ecs
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/ecs.cpp.o: CMakeFiles/ecs.dir/flags.make
 CMakeFiles/ecs.dir/sdk-gcc/ecs/ecs.cpp.o: ../sdk-gcc/ecs/ecs.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ecs.dir/sdk-gcc/ecs/ecs.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ecs.dir/sdk-gcc/ecs/ecs.cpp.o -c /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/ecs.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ecs.dir/sdk-gcc/ecs/ecs.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ecs.dir/sdk-gcc/ecs/ecs.cpp.o -c /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/ecs.cpp
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/ecs.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ecs.dir/sdk-gcc/ecs/ecs.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/ecs.cpp > CMakeFiles/ecs.dir/sdk-gcc/ecs/ecs.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/ecs.cpp > CMakeFiles/ecs.dir/sdk-gcc/ecs/ecs.cpp.i
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/ecs.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ecs.dir/sdk-gcc/ecs/ecs.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/ecs.cpp -o CMakeFiles/ecs.dir/sdk-gcc/ecs/ecs.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/ecs.cpp -o CMakeFiles/ecs.dir/sdk-gcc/ecs/ecs.cpp.s
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/ecs.cpp.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/ecs.dir/sdk-gcc/ecs/ecs.cpp.o.provides.build: CMakeFiles/ecs.dir/sdk-
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/io.cpp.o: CMakeFiles/ecs.dir/flags.make
 CMakeFiles/ecs.dir/sdk-gcc/ecs/io.cpp.o: ../sdk-gcc/ecs/io.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ecs.dir/sdk-gcc/ecs/io.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ecs.dir/sdk-gcc/ecs/io.cpp.o -c /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/io.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ecs.dir/sdk-gcc/ecs/io.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ecs.dir/sdk-gcc/ecs/io.cpp.o -c /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/io.cpp
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/io.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ecs.dir/sdk-gcc/ecs/io.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/io.cpp > CMakeFiles/ecs.dir/sdk-gcc/ecs/io.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/io.cpp > CMakeFiles/ecs.dir/sdk-gcc/ecs/io.cpp.i
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/io.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ecs.dir/sdk-gcc/ecs/io.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/io.cpp -o CMakeFiles/ecs.dir/sdk-gcc/ecs/io.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/io.cpp -o CMakeFiles/ecs.dir/sdk-gcc/ecs/io.cpp.s
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/io.cpp.o.requires:
 
@@ -227,16 +227,16 @@ CMakeFiles/ecs.dir/sdk-gcc/ecs/io.cpp.o.provides.build: CMakeFiles/ecs.dir/sdk-g
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/knapsack.cpp.o: CMakeFiles/ecs.dir/flags.make
 CMakeFiles/ecs.dir/sdk-gcc/ecs/knapsack.cpp.o: ../sdk-gcc/ecs/knapsack.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ecs.dir/sdk-gcc/ecs/knapsack.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ecs.dir/sdk-gcc/ecs/knapsack.cpp.o -c /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/knapsack.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ecs.dir/sdk-gcc/ecs/knapsack.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ecs.dir/sdk-gcc/ecs/knapsack.cpp.o -c /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/knapsack.cpp
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/knapsack.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ecs.dir/sdk-gcc/ecs/knapsack.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/knapsack.cpp > CMakeFiles/ecs.dir/sdk-gcc/ecs/knapsack.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/knapsack.cpp > CMakeFiles/ecs.dir/sdk-gcc/ecs/knapsack.cpp.i
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/knapsack.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ecs.dir/sdk-gcc/ecs/knapsack.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/knapsack.cpp -o CMakeFiles/ecs.dir/sdk-gcc/ecs/knapsack.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/knapsack.cpp -o CMakeFiles/ecs.dir/sdk-gcc/ecs/knapsack.cpp.s
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/knapsack.cpp.o.requires:
 
@@ -251,16 +251,16 @@ CMakeFiles/ecs.dir/sdk-gcc/ecs/knapsack.cpp.o.provides.build: CMakeFiles/ecs.dir
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/predict.cpp.o: CMakeFiles/ecs.dir/flags.make
 CMakeFiles/ecs.dir/sdk-gcc/ecs/predict.cpp.o: ../sdk-gcc/ecs/predict.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ecs.dir/sdk-gcc/ecs/predict.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ecs.dir/sdk-gcc/ecs/predict.cpp.o -c /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/predict.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ecs.dir/sdk-gcc/ecs/predict.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ecs.dir/sdk-gcc/ecs/predict.cpp.o -c /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/predict.cpp
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/predict.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ecs.dir/sdk-gcc/ecs/predict.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/predict.cpp > CMakeFiles/ecs.dir/sdk-gcc/ecs/predict.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/predict.cpp > CMakeFiles/ecs.dir/sdk-gcc/ecs/predict.cpp.i
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/predict.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ecs.dir/sdk-gcc/ecs/predict.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/predict.cpp -o CMakeFiles/ecs.dir/sdk-gcc/ecs/predict.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/predict.cpp -o CMakeFiles/ecs.dir/sdk-gcc/ecs/predict.cpp.s
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/predict.cpp.o.requires:
 
@@ -275,16 +275,16 @@ CMakeFiles/ecs.dir/sdk-gcc/ecs/predict.cpp.o.provides.build: CMakeFiles/ecs.dir/
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/prediction.cpp.o: CMakeFiles/ecs.dir/flags.make
 CMakeFiles/ecs.dir/sdk-gcc/ecs/prediction.cpp.o: ../sdk-gcc/ecs/prediction.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ecs.dir/sdk-gcc/ecs/prediction.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ecs.dir/sdk-gcc/ecs/prediction.cpp.o -c /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/prediction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ecs.dir/sdk-gcc/ecs/prediction.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ecs.dir/sdk-gcc/ecs/prediction.cpp.o -c /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/prediction.cpp
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/prediction.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ecs.dir/sdk-gcc/ecs/prediction.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/prediction.cpp > CMakeFiles/ecs.dir/sdk-gcc/ecs/prediction.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/prediction.cpp > CMakeFiles/ecs.dir/sdk-gcc/ecs/prediction.cpp.i
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/prediction.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ecs.dir/sdk-gcc/ecs/prediction.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/prediction.cpp -o CMakeFiles/ecs.dir/sdk-gcc/ecs/prediction.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/prediction.cpp -o CMakeFiles/ecs.dir/sdk-gcc/ecs/prediction.cpp.s
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/prediction.cpp.o.requires:
 
@@ -325,7 +325,7 @@ sdk-gcc/bin/ecs: CMakeFiles/ecs.dir/sdk-gcc/ecs/predict.cpp.o
 sdk-gcc/bin/ecs: CMakeFiles/ecs.dir/sdk-gcc/ecs/prediction.cpp.o
 sdk-gcc/bin/ecs: CMakeFiles/ecs.dir/build.make
 sdk-gcc/bin/ecs: CMakeFiles/ecs.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable sdk-gcc/bin/ecs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable sdk-gcc/bin/ecs"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ecs.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -351,6 +351,6 @@ CMakeFiles/ecs.dir/clean:
 .PHONY : CMakeFiles/ecs.dir/clean
 
 CMakeFiles/ecs.dir/depend:
-	cd /home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/qiujiawei/huaweiruantiao/CPP_325 /home/qiujiawei/huaweiruantiao/CPP_325 /home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug /home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug /home/qiujiawei/huaweiruantiao/CPP_325/cmake-build-debug/CMakeFiles/ecs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/qiujiawei/CLionProjects/MyARMA/ARMA整合 /home/qiujiawei/CLionProjects/MyARMA/ARMA整合 /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/cmake-build-debug /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/cmake-build-debug /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/cmake-build-debug/CMakeFiles/ecs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ecs.dir/depend
 

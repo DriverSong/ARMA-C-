@@ -6,5 +6,5 @@ CXX_FLAGS =  -O0 -Wall -g -ggdb -std=c++11   -std=gnu++11
 
 CXX_DEFINES = -D_DEBUG
 
-CXX_INCLUDES = -I/home/qiujiawei/huaweiruantiao/CPP_325/sdk-gcc/ecs/lib 
+CXX_INCLUDES = -I/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/lib 
 

@@ -3,7 +3,6 @@
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/ARMACore.cpp.o: ../sdk-gcc/ecs/ARMACore.cpp
 CMakeFiles/ecs.dir/sdk-gcc/ecs/ARMACore.cpp.o: ../sdk-gcc/ecs/ARMACore.h
-CMakeFiles/ecs.dir/sdk-gcc/ecs/ARMACore.cpp.o: ../sdk-gcc/ecs/Control.h
 
 CMakeFiles/ecs.dir/sdk-gcc/ecs/Control.cpp.o: ../sdk-gcc/ecs/AR.h
 CMakeFiles/ecs.dir/sdk-gcc/ecs/Control.cpp.o: ../sdk-gcc/ecs/ARMA.h

@@ -20,6 +20,32 @@ private:
                                          // var,1,2,...,q]
     std::vector<double> array;
 
+
+    double gaussrand0(){
+        static double V1, V2, S;
+        static int phase = 0;
+        double X;
+
+        if ( phase == 0 ) {
+            do {
+                double U1 = (double)rand() / RAND_MAX;
+                double U2 = (double)rand() / RAND_MAX;
+
+                V1 = 2 * U1 - 1;
+                V2 = 2 * U2 - 1;
+                S = V1 * V1 + V2 * V2;
+            } while(S >= 1 || S == 0);
+
+            X = V1 * sqrt(-2 * log(S) / S);
+        } else
+            X = V2 * sqrt(-2 * log(S) / S);
+
+        phase = 1 - phase;
+
+        return X;
+    }
+
+
 public:
     ARMA(std::vector<double> array, int p, int q){
         this->p = p;
@@ -65,83 +91,88 @@ public:
         return aic;
     }
 
-    std::vector<double> predictSum(int count){
-        //std::cout << "Coe:" << std::endl;
-//        for(int i = 0; i < this->vec[0].size(); i++){
-//            std::cout << this->vec[0][i] << ";";
-//        }
-//        std::cout << std::endl;
+    std::vector<double> predict(int count){
         std::vector<double> predict(count);
+        int p = this->p;
+        int q = this->q;
+        std::vector<double> array(this->array);
+
         if(this->q == 0){
             //AR
             //[var,a[1,2,...,p]]
-            double var = this->vec[0][0];
-            std::vector<double> arrayTemp(this->array);
-//            std::cout << "size1" << arrayTemp.size() << std::endl;
-//            std::cout << "predict:";
-            for(int i = 0; i< count; i++){
-                int size = arrayTemp.size();
-                predict[i] = std::sqrt(var) * gaussrand();
-//                std::cout << predict[i] << ">>>>>";
-                for(int j = 0; j < this->p; j++){
-                    predict[i] += arrayTemp[size - 1 - j] * this->vec[0][j + 1];
+            std::vector<double> ARCoe(p);
+            for(int i = 0; i < p; i++){
+                ARCoe[i] = this->vec[0][i + 1];
+            }
+
+            for(int i = 0; i < count; i++){
+                int n = array.size();
+                for(int j = 0; j < p; j++){
+                    predict[i] += array[n - 1 - j] * ARCoe[j];
                 }
-//                std::cout << i << ":" << predict[i] << std::endl;
-                arrayTemp.push_back(predict[i]);
+                array.push_back(predict[i]);
             }
         } else if(this->p == 0){
             //MA
             //[var, avg, 1(belta[0]), belta[1,2,...,q]]
-            int size = this->array.size();
-            int errLength = count + this->q;
-            std::vector<double> MACoe = this->vec[0];
-            double var = MACoe[0];
-            double avg = MACoe[1];
-            std::vector<double> errData(errLength);
+            double var = this->vec[0][0];
+            std::vector<double> MACoe(q);
+            for(int i = 0; i < q; i++){
+                MACoe[i] = this->vec[0][i + 3];
+            }
 
-            for(int i = 0; i < errLength; i++){
-                errData[i] = std::sqrt(var) * gaussrand();
-            }
-            for(int i = 0; i < count; i ++){
-                predict[i] = errData[this->q + i] + avg;
-                for(int j = 0; j < this->q; j++){
-                    predict[i] += errData[this->q + i - 1 - j] * MACoe[3 + j];
+            std::vector<double> gaussNoise(q);
+
+            int size = array.size();
+            for(int i = 0; i < size + count; i++){
+                if(i >= size){
+                    for(int j = 0; j < q; j++){
+                        predict[i - size] += gaussNoise[j] * MACoe[j];
+                    }
                 }
+
+                for(int j = q - 1; j > 0; j--){
+                    gaussNoise[j] = gaussNoise[j - 1];
+                }
+                gaussNoise[0] = this->gaussrand0() * std::sqrt(var);
             }
+
         } else{
             //ARMA
             //[c,1,2,...,p;
             // var,1,2,...,q]
-            int errLength = count + this->q;
-            double c = this->vec[0][0];
             double var = this->vec[1][0];
-            std::vector<double> arrayTemp(this->array);
-            std::vector<double> errData(errLength);
-            std::vector<double> ARCoe(this->p);
-            std::vector<double> MACoe(this->q);
-            for(int i = 0; i < this->p; i++){
+
+            std::vector<double> ARCoe(p);
+            std::vector<double> MACoe(q);
+            for(int i = 0; i < p; i++){
                 ARCoe[i] = this->vec[0][i + 1];
             }
-            for(int i = 0; i < this->q; i++){
+            for(int i = 0; i < q; i++){
                 MACoe[i] = this->vec[1][i + 1];
             }
 
-            for(int i = 0; i < errLength; i++){
-                errData[i] = std::sqrt(var) * gaussrand();
-            }
-            for(int i = 0; i < count; i++){
-                int size = arrayTemp.size();
-                predict[i] = c + errData[this->q];
-                for(int j = 0; j < this->p; j++){
-                    predict[i] += ARCoe[j] * arrayTemp[size - 1 - j];
+            std::vector<double> gaussNoise(q);
+
+            double size = array.size();
+            for(int i = 0; i < size + count; i++){
+                if(i >= size){
+                    for(int j = 0; j < p; j++){
+                        predict[i - size] += array[i - 1 - j] * ARCoe[j];
+                    }
+
+                    for(int j = 0; j < q; j++){
+                        predict[i - size] += gaussNoise[j] * MACoe[j];
+                    }
                 }
-                for(int j = 0; j < this->q; j++){
-                    predict[i] += MACoe[j] * errData[this->q + i - 1 -j];
+                for(int j = q - 1; j > 0; j--){
+                    gaussNoise[j] = gaussNoise[j - 1];
                 }
-                arrayTemp.push_back(predict[i]);
+                gaussNoise[0] = this->gaussrand0() * std::sqrt(var);
+
+                array.push_back(predict[i - size]);
             }
         }
-//        std::cout << "------------" << std::endl;
         return predict;
     }
 };
