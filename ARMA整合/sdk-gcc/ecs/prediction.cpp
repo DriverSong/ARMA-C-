@@ -6,7 +6,7 @@
 
 void PredictAll(std::vector<std::vector<double> >& AlldataArray, int period, int numFla, int* predict)
 {
-    int cnt = 7;//预测一天时选取最优的cnt个模型进行预测，再取平均。
+    int cnt = 5;//预测一天时选取最优的cnt个模型进行预测，再取平均。
     for(int n = 0; n < numFla; n++){//最大循环，共numfla个服务器
         //第n个服务器的差分预处理
         std::vector<double> dataArray;
@@ -23,29 +23,19 @@ void PredictAll(std::vector<std::vector<double> >& AlldataArray, int period, int
             double predictAvg = 0.0;
 
             for(int j = 0; j < cnt; j ++) {
-//                int maxP = (int) std::log(arrayDiff.size());
+                int maxP = (int) std::log(arrayDiff.size());
 //                int maxP = (int)pow(round(12 * arrayDiff.size() / 100.0), 0.25);
 //                if(maxP > arrayDiff.size() - 1){
 //                    maxP = arrayDiff.size() -1;
 //                }
-//                int maxQ = 0;
-                int maxP = 10;
-                int maxQ = 10;
-                int maxPQ = 7;
+                int maxQ = 0;
+//                int maxP = 7;
+//                int maxQ = 7;
 
-                std::vector<int> bestModel(predictByAIC(arrayDiff, maxP, maxQ, maxPQ, usedPQ,j));
-
-
+                std::vector<int> bestModel(predictByAIC(arrayDiff, maxP, maxQ, usedPQ,j));
 
                 int bestP = bestModel[0];
                 int bestQ = bestModel[1];
-//                int bestP = (int)pow(round(12 * arrayDiff.size() / 100.0), 0.25);
-//                if(bestP > arrayDiff.size() - 1){
-//                    bestP = arrayDiff.size() -1;
-//                }
-//
-//                int bestQ = 0;
-
                 std::vector<int> PQ(2);
                 PQ[0] = bestP;
                 PQ[1] = bestQ;
@@ -59,6 +49,9 @@ void PredictAll(std::vector<std::vector<double> >& AlldataArray, int period, int
 
                 ARMA arma = ARMA(arrayDiff, bestP, bestQ);
                 arma.calculateARMACoe();
+
+//                AR arma = AR(arrayDiff, bestP);
+//                arma.calculateCoe();
 
                 std::vector<double> predictOneDay(arma.predict(1));
                 bestPredict[j] = predictOneDay[0];
@@ -94,3 +87,4 @@ void PredictAll(std::vector<std::vector<double> >& AlldataArray, int period, int
         predict[n] = (int)(predict[n] + 0.5);
     }
 }
+

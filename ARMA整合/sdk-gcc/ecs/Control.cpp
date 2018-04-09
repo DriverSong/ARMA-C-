@@ -8,45 +8,16 @@
 #include <iostream>
 #include "Control.h"
 
-std::vector<int> predictByAIC(std::vector<double> array, int maxP, int maxQ, int maxPQ, std::vector<std::vector<int>> usedPQ , int flag0) {
+std::vector<int> predictByAIC(std::vector<double> array, int maxP, int maxQ, std::vector<std::vector<int>> usedPQ , int flag0) {
     int p = 0;
     int q = 0;
     std::vector<int> bestModel(2);
     double minAIC = 1.7976931348623157E308;
-    if(maxPQ == 0){
-        if(maxP == 0 && maxQ == 0){
-            std::cout << "p and p cannot be both zero!" << std::endl;
-        } else{
-            for(int i = 0; i <= maxP; i++){
-                for(int j = 0; j <= maxQ; j++){
-                    int flag = 1;
-                    if(flag0 != 0){
-                        for(int k = 0; k < usedPQ.size(); k++){
-                            if(i == usedPQ[k][0] && j == usedPQ[k][1]){
-                                flag = 0;
-                                break;
-                            }
-                        }
-                    }
-                    if(flag){
-                        if(i == 0 && j == 0)continue;
-                        double AIC;
-                        ARMA arma(array, i, j);
-                        arma.calculateARMACoe();
-                        AIC = arma.calculateAIC();
-                        if( AIC <= minAIC){
-                            minAIC = AIC;
-                            p = i;
-                            q = j;
-                        }
-                    }
-                }
-            }
-        }
+    if(maxP == 0 && maxQ == 0){
+        std::cout << "p and p cannot be both zero!" << std::endl;
     } else{
-        for(int i = 0; i <= maxPQ; i++){
-            for(int j = 0; j <= maxPQ - i; j++){
-                if(i == 0 && j == 0) continue;
+        for(int i = 0; i <= maxP; i++){
+            for(int j = 0; j <= maxQ; j++){
                 int flag = 1;
                 if(flag0 != 0){
                     for(int k = 0; k < usedPQ.size(); k++){
@@ -59,9 +30,19 @@ std::vector<int> predictByAIC(std::vector<double> array, int maxP, int maxQ, int
                 if(flag){
                     if(i == 0 && j == 0)continue;
                     double AIC;
-                    ARMA arma(array, i, j);
-                    arma.calculateARMACoe();
-                    AIC = arma.calculateAIC();
+                    if(i == 0){
+                        MA ma(array,j);
+                        ma.calculateCoe();
+                        AIC = ma.calculateAIC();
+                    } else if(j == 0){
+                        AR ar(array, i);
+                        ar.calculateCoe();
+                        AIC = ar.calculateAIC();
+                    } else{
+                        ARMA arma(array, i, j);
+                        arma.calculateARMACoe();
+                        AIC = arma.calculateAIC();
+                    }
                     if( AIC <= minAIC){
                         minAIC = AIC;
                         p = i;

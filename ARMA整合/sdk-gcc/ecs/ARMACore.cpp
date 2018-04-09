@@ -78,10 +78,10 @@ std::vector<double> ARMACore::autoCov(std::vector<double> array, int order){
 std::vector<double> ARMACore::Levison(std::vector<double> autoCov){
     int order = autoCov.size() - 1;
     std::vector<std::vector<double>> tempCoe;//[var(0),
-                                             // var(1), a(11)
-                                             // var(2), a(21), a(22)
-                                             // ...
-                                             // var(size-1), a((size-1)1),...,a((size-1)(size-1))]
+    // var(1), a(11)
+    // var(2), a(21), a(22)
+    // ...
+    // var(size-1), a((size-1)1),...,a((size-1)(size-1))]
 
     tempCoe.resize(2);
     for(int i = 0; i < tempCoe.size(); i++){
@@ -239,7 +239,7 @@ std::vector<double> ARMACore::ARMACoe(std::vector<double> array, int p, int q) {
         else
         {
             ARMACoe[i] = MACoe[i - ARCoe.size()];
-         }
+        }
     }
     return ARMACoe;//[c,1,2,...,p,var,1,2,...,q]
 }
@@ -272,98 +272,106 @@ double ARMACore::calculateAIC(std::vector<double> array, std::vector<std::vector
     //AR
     if(flag == 0){
         //Coe[0] = [var, a[1,2,3,...,p]
+        double var = Coe[0][0];
         int p = Coe[0].size() - 1;
-        int n = array.size();
+        int predictSize = array.size() - p;
+
         std::vector<double> ARCoe(p);
-        for(int i = 0; i < ARCoe.size(); i++){
+        std::vector<double> errData(predictSize);
+        for(int i = 0; i < p; i++){
             ARCoe[i] = Coe[0][i + 1];
         }
 
+        //计算残差
         double sumErr = 0.0;
-        for(int i = p; i < n; i++){
-            double predict = 0.0;
+        for(int i = 0; i < predictSize; i++){
+            double randomValue = gaussrand();
+            errData[i] = randomValue * std::sqrt(var);
+            double predictAR = errData[i];
             for(int j = 0; j < p; j++){
-                predict += array[i - 1 - j] * ARCoe[j];
+                predictAR += array[p - 1 + i - j] * ARCoe[j];
             }
-            sumErr += (predict - array[i]) * (predict - array[i]);
+            sumErr += (array[i + p] - predictAR)*(array[i + p] - predictAR);
         }
 
-        return 2*p + (n - p)*std::log(sumErr/(n - p));
+        //计算AIC:https://baike.baidu.com/item/AIC/10910647
+        return 2*(p + 1) + (predictSize)*std::log(sumErr/(predictSize));
     }
 
     //MA
     if(flag == 1){
         //Coe[0] = [var, avg, 1(belta[0]), belta[1,2,...,q]]
-        int n = array.size();
-        int q = Coe[0].size() - 3;
         double var = Coe[0][0];
-        std::vector<double> MACoe(q);
+        double avg = Coe[0][1];
+        int q = Coe[0].size() - 3;
+        int predictSize = array.size() - q;
 
+        std::vector<double> MACoe(q);
+        std::vector<double> errData(array.size());
         for(int i = 0; i < q; i++){
             MACoe[i] = Coe[0][i + 3];
         }
+        for(int i = 0; i < array.size(); i++){
+            double randomValue = gaussrand();
+            errData[i] = randomValue*std::sqrt(var);
+        };
 
+        //计算残差
         double sumErr = 0.0;
-        std::vector<double> gaussNoise(q);
 
-
-        for(int i = 0; i < n; i++){
-            if(i >= q){
-                double predict = 0.0;
-                for(int j = 0; j < q; j++){
-                    predict += gaussNoise[j] * MACoe[j];
-                }
-                sumErr += (predict - array[i]) * (predict - array[i]);
+        for(int i = q; i < array.size(); i++){
+            double predictMA = 0.0;
+            predictMA = avg + errData[i];
+            for(int j = 0; j < q; j++){
+                predictMA += MACoe[j] * errData[i - 1 - j];
             }
-            for(int j = q -1; j > 0; j--){
-                gaussNoise[j] = gaussNoise[j - 1];
-            }
-            gaussNoise[0] = gaussrand() * std::sqrt(var);
+            sumErr += (array[i] - predictMA)*(array[i] - predictMA);
         }
 
-        return 2*q + (n - q)*std::log(sumErr/(n - q));
+
+        //计算AIC:https://baike.baidu.com/item/AIC/10910647
+        return 2*(q + 2) + (predictSize)*std::log(sumErr/(predictSize));
     }
 
     //ARMA
     if(flag == 2){
         //Coe[0] = [c, alpha[1,2,3,...,p]
         //Coe[1] = [var, belta[1,2,...,q]]
+        double delt = Coe[0][0];
+        double var = Coe[1][0];
         int p = Coe[0].size() - 1;
         int q = Coe[1].size() - 1;
-        int n = array.size();
-        double var = Coe[1][0];
+        int predictSize = array.size() - std::max(p, q);
+        int begin = std::max(p, q);
+        std::vector<double> errData(array.size());
         std::vector<double> ARCoe(p);
         std::vector<double> MACoe(q);
 
         for(int i = 0; i < p; i++){
             ARCoe[i] = Coe[0][i + 1];
         }
-
         for(int i = 0; i < q; i++){
             MACoe[i] = Coe[0][i + 1];
         }
 
-        double sumErr = 0.0;
-        std::vector<double> gaussNoise(q);
+        for(int i = 0; i < errData.size(); i++){
+            errData[i] = gaussrand()*std::sqrt(var);
+        }
 
-        for(int i = 0; i < n; i++){
-            if(i >= q && i >= p){
-                double predict = 0.0;
-                for(int j = 0; j < p; j++){
-                    predict += ARCoe[j] * array[i - 1 - j];
-                }
-                for(int j = 0; j < q; j++){
-                    predict += MACoe[j] * gaussNoise[j];
-                }
-                sumErr += (predict - array[i])*(predict - array[i]);
+        //计算残差
+        double sumErr = 0.0;
+        for(int i = begin; i < array.size(); i++){
+            double predict = delt + errData[i];
+            for(int j = 0; j < p; j++){
+                predict += ARCoe[j]*array[i - 1 - j];
             }
-            for(int j = q - 1; j > 0; j--){
-                gaussNoise[j] = gaussNoise[j - 1];
+            for(int j = 0; j < q; j++){
+                predict += MACoe[j]*errData[i - 1 -j];
             }
-            gaussNoise[0] = gaussrand() * std::sqrt(var);
+            sumErr += (array[i] - predict) * (array[i] - predict);
         }
 
         //计算AIC:https://baike.baidu.com/item/AIC/10910647
-        return 2*(p + q) + (n - std::max(p, q)) * std::log(sumErr/(n - std::max(p, q)));
+        return 2*(p + q + 2) + (array.size() - (p + q +1)) * std::log(sumErr/(array.size() - (p + q +1)));
     }
 }
