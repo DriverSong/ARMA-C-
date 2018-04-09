@@ -279,6 +279,29 @@ CMakeFiles/ecs.dir/distribution.cpp.o.provides: CMakeFiles/ecs.dir/distribution.
 
 CMakeFiles/ecs.dir/distribution.cpp.o.provides.build: CMakeFiles/ecs.dir/distribution.cpp.o
 
+CMakeFiles/ecs.dir/SA.cpp.o: CMakeFiles/ecs.dir/flags.make
+CMakeFiles/ecs.dir/SA.cpp.o: /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/SA.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/ecs.dir/SA.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ecs.dir/SA.cpp.o -c /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/SA.cpp
+
+CMakeFiles/ecs.dir/SA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ecs.dir/SA.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/SA.cpp > CMakeFiles/ecs.dir/SA.cpp.i
+
+CMakeFiles/ecs.dir/SA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ecs.dir/SA.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/SA.cpp -o CMakeFiles/ecs.dir/SA.cpp.s
+
+CMakeFiles/ecs.dir/SA.cpp.o.requires:
+.PHONY : CMakeFiles/ecs.dir/SA.cpp.o.requires
+
+CMakeFiles/ecs.dir/SA.cpp.o.provides: CMakeFiles/ecs.dir/SA.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ecs.dir/build.make CMakeFiles/ecs.dir/SA.cpp.o.provides.build
+.PHONY : CMakeFiles/ecs.dir/SA.cpp.o.provides
+
+CMakeFiles/ecs.dir/SA.cpp.o.provides.build: CMakeFiles/ecs.dir/SA.cpp.o
+
 # Object files for target ecs
 ecs_OBJECTS = \
 "CMakeFiles/ecs.dir/predict.cpp.o" \
@@ -290,7 +313,8 @@ ecs_OBJECTS = \
 "CMakeFiles/ecs.dir/ARMACore.cpp.o" \
 "CMakeFiles/ecs.dir/ecs.cpp.o" \
 "CMakeFiles/ecs.dir/Control.cpp.o" \
-"CMakeFiles/ecs.dir/distribution.cpp.o"
+"CMakeFiles/ecs.dir/distribution.cpp.o" \
+"CMakeFiles/ecs.dir/SA.cpp.o"
 
 # External object files for target ecs
 ecs_EXTERNAL_OBJECTS =
@@ -305,6 +329,7 @@ ecs_EXTERNAL_OBJECTS =
 /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/bin/ecs: CMakeFiles/ecs.dir/ecs.cpp.o
 /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/bin/ecs: CMakeFiles/ecs.dir/Control.cpp.o
 /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/bin/ecs: CMakeFiles/ecs.dir/distribution.cpp.o
+/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/bin/ecs: CMakeFiles/ecs.dir/SA.cpp.o
 /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/bin/ecs: CMakeFiles/ecs.dir/build.make
 /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/bin/ecs: CMakeFiles/ecs.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/bin/ecs"
@@ -324,6 +349,7 @@ CMakeFiles/ecs.dir/requires: CMakeFiles/ecs.dir/ARMACore.cpp.o.requires
 CMakeFiles/ecs.dir/requires: CMakeFiles/ecs.dir/ecs.cpp.o.requires
 CMakeFiles/ecs.dir/requires: CMakeFiles/ecs.dir/Control.cpp.o.requires
 CMakeFiles/ecs.dir/requires: CMakeFiles/ecs.dir/distribution.cpp.o.requires
+CMakeFiles/ecs.dir/requires: CMakeFiles/ecs.dir/SA.cpp.o.requires
 .PHONY : CMakeFiles/ecs.dir/requires
 
 CMakeFiles/ecs.dir/clean:

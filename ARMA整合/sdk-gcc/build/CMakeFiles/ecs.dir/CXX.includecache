@@ -84,6 +84,20 @@ cmath
 Control.h
 /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/Control.h
 
+/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/SA.cpp
+SA.h
+/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/SA.h
+algorithm
+-
+iostream
+-
+
+/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/SA.h
+string
+-
+vector
+-
+
 /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/TreeNode.cpp
 TreeNode.h
 /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/TreeNode.h
@@ -173,6 +187,8 @@ vector
 -
 Date.h
 /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/Date.h
+SA.h
+/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/SA.h
 
 /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/predict.h
 lib_io.h

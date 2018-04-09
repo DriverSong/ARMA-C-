@@ -9,6 +9,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/ecs.dir/ecs.cpp.o"
   "CMakeFiles/ecs.dir/Control.cpp.o"
   "CMakeFiles/ecs.dir/distribution.cpp.o"
+  "CMakeFiles/ecs.dir/SA.cpp.o"
   "/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/bin/ecs.pdb"
   "/home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/bin/ecs"
 )

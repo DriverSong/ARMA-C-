@@ -183,6 +183,30 @@ Date.cpp.s:
 	$(MAKE) -f CMakeFiles/ecs.dir/build.make CMakeFiles/ecs.dir/Date.cpp.s
 .PHONY : Date.cpp.s
 
+SA.o: SA.cpp.o
+.PHONY : SA.o
+
+# target to build an object file
+SA.cpp.o:
+	$(MAKE) -f CMakeFiles/ecs.dir/build.make CMakeFiles/ecs.dir/SA.cpp.o
+.PHONY : SA.cpp.o
+
+SA.i: SA.cpp.i
+.PHONY : SA.i
+
+# target to preprocess a source file
+SA.cpp.i:
+	$(MAKE) -f CMakeFiles/ecs.dir/build.make CMakeFiles/ecs.dir/SA.cpp.i
+.PHONY : SA.cpp.i
+
+SA.s: SA.cpp.s
+.PHONY : SA.s
+
+# target to generate assembly for a file
+SA.cpp.s:
+	$(MAKE) -f CMakeFiles/ecs.dir/build.make CMakeFiles/ecs.dir/SA.cpp.s
+.PHONY : SA.cpp.s
+
 TreeNode.o: TreeNode.cpp.o
 .PHONY : TreeNode.o
 
@@ -369,6 +393,9 @@ help:
 	@echo "... Date.o"
 	@echo "... Date.i"
 	@echo "... Date.s"
+	@echo "... SA.o"
+	@echo "... SA.i"
+	@echo "... SA.s"
 	@echo "... TreeNode.o"
 	@echo "... TreeNode.i"
 	@echo "... TreeNode.s"

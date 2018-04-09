@@ -4,6 +4,7 @@
 
 #include "SA.h"
 #include <algorithm>
+#include <iostream>
 
 int SA::calculateScore(std::vector<std::vector<int>> res) {
 //    int sizePHY = res.size();
@@ -42,6 +43,7 @@ std::vector<std::vector<int>> SA::distribution(std::vector<int> flaSeries){
                     std::vector<int> newPHY(this->numFla, 0);
                     newPHY[flaSeries[i]]++;
                     res.push_back(newPHY);
+                    break;
                 }
             }
         }
@@ -85,15 +87,23 @@ SA::SA(double startT, double endT, double r, int sumCPU, int sumMEM, int numFla,
         this->sumPredictMEM += vecFlaPre[i] * vecFlaMEM[i];
     }
 
+//    for(int i = 0; i < this->numFla; i++){
+//        std::cout << this->vecFlaPre[i] << ";";
+//    }
+//    std::cout << std::endl;
+
     for(int i = 0; i < this->numFla; i++){
         for(int j = 0; j < this->vecFlaPre[i]; j++){
             this->flaSeries.push_back(i);
         }
     }
 
+
     for(int i = 0; i < this->flaSeries.size(); i++){
         this->des.push_back(i);
+//        std::cout << flaSeries[i] << ";";
     }
+//    std::cout << std::endl;
 
     this->res = this->distribution(this->flaSeries);
 

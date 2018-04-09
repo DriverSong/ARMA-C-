@@ -6,7 +6,7 @@
 
 void PredictAll(std::vector<std::vector<double> >& AlldataArray, int period, int numFla, int* predict)
 {
-    int cnt = 1;//预测一天时选取最优的cnt个模型进行预测，再取平均。
+    int cnt = 7;//预测一天时选取最优的cnt个模型进行预测，再取平均。
     for(int n = 0; n < numFla; n++){//最大循环，共numfla个服务器
         //第n个服务器的差分预处理
         std::vector<double> dataArray;

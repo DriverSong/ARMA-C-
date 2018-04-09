@@ -14,6 +14,9 @@ CMakeFiles/ecs.dir/Control.cpp.o: /home/qiujiawei/CLionProjects/MyARMA/ARMA整�
 CMakeFiles/ecs.dir/Date.cpp.o: /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/Date.cpp
 CMakeFiles/ecs.dir/Date.cpp.o: /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/Date.h
 
+CMakeFiles/ecs.dir/SA.cpp.o: /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/SA.cpp
+CMakeFiles/ecs.dir/SA.cpp.o: /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/SA.h
+
 CMakeFiles/ecs.dir/TreeNode.cpp.o: /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/TreeNode.cpp
 CMakeFiles/ecs.dir/TreeNode.cpp.o: /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/TreeNode.h
 
@@ -36,6 +39,7 @@ CMakeFiles/ecs.dir/knapsack.cpp.o: /home/qiujiawei/CLionProjects/MyARMA/ARMA整�
 CMakeFiles/ecs.dir/knapsack.cpp.o: /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/knapsack.h
 
 CMakeFiles/ecs.dir/predict.cpp.o: /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/Date.h
+CMakeFiles/ecs.dir/predict.cpp.o: /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/SA.h
 CMakeFiles/ecs.dir/predict.cpp.o: /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/distribution.h
 CMakeFiles/ecs.dir/predict.cpp.o: /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/lib/lib_io.h
 CMakeFiles/ecs.dir/predict.cpp.o: /home/qiujiawei/CLionProjects/MyARMA/ARMA整合/sdk-gcc/ecs/predict.cpp
