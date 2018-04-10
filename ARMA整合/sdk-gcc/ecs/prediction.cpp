@@ -17,7 +17,7 @@ void PredictAll(std::vector<std::vector<double> >& AlldataArray, int period, int
         std::vector<double> tempdataArray;//去掉原始数据末尾N位
         //设置缺省时间段
         int dataArrayNums = dataArray.size();
-        int aheaddays = dataArrayNums - 7;
+        int aheaddays = dataArrayNums - 14;
         //将去掉尾部的数据赋值给tempdataArray
         for (int i = 0; i < aheaddays ; i++)
         {
@@ -25,7 +25,7 @@ void PredictAll(std::vector<std::vector<double> >& AlldataArray, int period, int
             std::cout<<dataArray[i]<<std::endl;
         } 
         //预测的天数改为period加上14天
-        for(int i = 0; i < period+7; i++){
+        for(int i = 0; i < period + 14; i++){
             std::vector<std::vector<int>> usedPQ;//存放使用过的p、q对
             std::vector<double> bestPredict(cnt);//存放最优的预测值
             std::vector<double> arrayDiff(preDiff(tempdataArray, diffGap));//生成差分序列
@@ -62,7 +62,7 @@ void PredictAll(std::vector<std::vector<double> >& AlldataArray, int period, int
             }
             if(i<dataArrayNums-aheaddays)
             {
-                if(abs(aftdeal - dataArray[aheaddays+i]) > 10)
+                if(abs(aftdeal - dataArray[aheaddays+i]) > 22)
                 {
                     tempdataArray.push_back(double(aftdeal));
 
