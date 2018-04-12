@@ -6,4 +6,4 @@
 #include "iostream"
 #include <numeric>
 
-void PredictAll(std::vector<std::vector<double> >& AlldataArray, int period, int numFla, int* predict);
+void PredictAll(std::vector<std::vector<double> >& AlldataArray, int period, int interval, int numFla, int* predict);

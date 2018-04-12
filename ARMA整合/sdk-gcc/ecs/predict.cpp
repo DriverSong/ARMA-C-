@@ -4,35 +4,34 @@
 
 #include <iostream>
 #include <sstream>
-#include <fstream>
 #include <map>
 #include <vector>
 
 #define MAX_PERIOD 30
 #include "Date.h"
-#include "SA.h"
 
-//ÄãÒªÍê³ÉµÄ¹¦ÄÜ×ÜÈë¿Ú
+//ä½ è¦å®Œæˆçš„åŠŸèƒ½æ€»å…¥å£
 void predict_server(char * info[MAX_INFO_NUM], char * data[MAX_DATA_NUM], int data_num, char * filename)
 {
 
-	std::stringstream ss;						// ×Ö·û´®Á÷
-	//std::ofstream ss;							// Êä³öÎÄ¼şÁ÷
-	std::string serial, flaName, time, target;	// ĞéÄâ»úID£¬ĞéÄâ»ú¹æ¸ñ£¬´´½¨Ê±¼ä£¬ÓÅ»¯×ÊÔ´Î¬¶ÈÃû
-	std::string str, strResult;					// ÁÙÊ±str£¬½á¹û×Ö·û´®
-	Date date, dateFirst, dateLast;				// µ±Ç°ÈÕÆÚ£¬dataÖĞ×îÔçÈÕÆÚ£¬dataÖĞ×îÍíÈÕÆÚ
-	int sumCPU, sumMEM, sumHD,					// ÎïÀí·şÎñÆ÷CPUºËÊı£¬ÄÚ´æ´óĞ¡£¨GB£©£¬Ó²ÅÌ´óĞ¡£¨GB£©
-		numFla, period, sumDate, indxDate,		// FlavorÊı£¬ÖÜÆÚ³¤¶È£¬×ÜÈÕÆÚÊı£¬ÈÕÆÚĞòºÅ
-		vCPU, vMEM, numPHY, numFlaValid;		// CPUºËÊı£¬ÄÚ´æ´óĞ¡£¨MB£©£¬ÎïÀí·şÎñÆ÷ÊıÄ¿,ÓĞĞ§FlavorÊı
+	std::stringstream ss;						// å­—ç¬¦ä¸²æµ
+	std::string serial, flaName, time, target;	// è™šæ‹ŸæœºIDï¼Œè™šæ‹Ÿæœºè§„æ ¼ï¼Œåˆ›å»ºæ—¶é—´ï¼Œä¼˜åŒ–èµ„æºç»´åº¦å
+	std::string str, strResult;					// ä¸´æ—¶strï¼Œç»“æœå­—ç¬¦ä¸²
+	Date date, dateFirstTrans, dateLastTrans,	// å½“å‰æ—¥æœŸï¼Œè®­ç»ƒçš„æœ€æ—©æ—¥æœŸï¼Œè®­ç»ƒçš„æœ€æ™šæ—¥æœŸ
+		dateFirstPre, dateLastPre;				// é¢„æµ‹çš„æœ€æ—©æ—¥æœŸï¼Œé¢„æµ‹çš„æœ€æ™šæ—¥æœŸ
+	int sumCPU, sumMEM, sumHD,					// ç‰©ç†æœåŠ¡å™¨CPUæ ¸æ•°ï¼Œå†…å­˜å¤§å°ï¼ˆGBï¼‰ï¼Œç¡¬ç›˜å¤§å°ï¼ˆGBï¼‰
+		numFla, period, sumDate, indxDate,		// Flavoræ•°ï¼Œå‘¨æœŸé•¿åº¦ï¼Œæ€»æ—¥æœŸæ•°ï¼Œæ—¥æœŸåºå·
+		vCPU, vMEM, numPHY, numFlaPre,			// CPUæ ¸æ•°ï¼Œå†…å­˜å¤§å°ï¼ˆMBï¼‰ï¼Œç‰©ç†æœåŠ¡å™¨æ•°ç›®,æœ‰æ•ˆFlavoræ•°
+		interval;								// é¢„æµ‹å¼€å§‹ä¸è®­ç»ƒç»“æŸä¹‹é—´çš„ç©ºä½™å¤©æ•°
 
-	std::map<std::string, int> mapFlaIndx;		// FlavorÃûmap
-	std::string arrFlaName[MAX_FLAVOR];			// FlavorÃûÊı×é
-	int arrFlaCPU[MAX_FLAVOR] = {0,};					// ¸÷Flavor¶ÔÓ¦CPUºËÊıÊı×é
-	int arrFlaMEM[MAX_FLAVOR] = {0,};					// ¸÷Flavor¶ÔÓ¦ÄÚ´æÊı×é
-	int arrFlaPre[MAX_FLAVOR] = {0,};				// ¸÷FlavorÔ¤²â½á¹û
-//	int res[MAX_PHY][MAX_FLAVOR];				// ·ÖÅä½á¹ûÊı×é
+	std::map<std::string, int> mapFlaIndx;		// Flavoråmap
+	std::string arrFlaName[MAX_FLAVOR];			// Flavoråæ•°ç»„
+	int arrFlaCPU[MAX_FLAVOR];					// å„Flavorå¯¹åº”CPUæ ¸æ•°æ•°ç»„
+	int arrFlaMEM[MAX_FLAVOR];					// å„Flavorå¯¹åº”å†…å­˜æ•°ç»„
+	int arrFlaPre[MAX_FLAVOR];					// å„Flavoré¢„æµ‹ç»“æœ
+	int res[MAX_PHY][MAX_FLAVOR];				// åˆ†é…ç»“æœæ•°ç»„
 
-	// ¶ÁÈ¡info
+	// è¯»å–info
 	ss << info[0];
 	ss >> sumCPU >> sumMEM >> sumHD;
 	ss << info[2];
@@ -49,24 +48,25 @@ void predict_server(char * info[MAX_INFO_NUM], char * data[MAX_DATA_NUM], int da
 	ss << info[4 + numFla];
 	ss >> target;
 	ss << info[6 + numFla];
-	ss >> dateFirst >> time;
+	ss >> dateFirstPre >> time;
 	ss << info[7 + numFla];
-	ss >> dateLast >> time;
+	ss >> dateLastPre >> time;
 	ss.clear();
-	period = dateLast - dateFirst;
+	period = dateLastPre - dateFirstPre;
 
-	// ·ÖÎödataÖĞµÄÈÕÆÚ
+	// åˆ†ædataä¸­çš„æ—¥æœŸ
 	ss << data[0];
-	ss >> serial >> flaName >> dateFirst >> time;
+	ss >> serial >> flaName >> dateFirstTrans >> time;
 	ss << data[data_num - 1];
-	ss >> serial >> flaName >> dateLast >> time;
+	ss >> serial >> flaName >> dateLastTrans >> time;
 	ss.clear();
-	sumDate = dateLast - dateFirst + 1;
+	sumDate = dateLastTrans - dateFirstTrans + 1;
+	interval = dateFirstPre - dateLastTrans - 1;
 
-	// vecData³õÊ¼»¯
+	// äºŒç»´æ•°æ®å‘é‡vecData
 	std::vector<std::vector<double>> vecData(numFla, std::vector<double>(sumDate, 0));
 
-	// Í³¼Æ¸÷flavorÃ¿ÖÜÊıÄ¿
+	// ç»Ÿè®¡å„flavoræ¯å‘¨æ•°ç›®
 	indxDate = 0;
 	for (int i = 0; i < data_num; i++)
 	{
@@ -74,74 +74,39 @@ void predict_server(char * info[MAX_INFO_NUM], char * data[MAX_DATA_NUM], int da
 		ss >> serial >> flaName >> date >> time;
 		if (mapFlaIndx.find(flaName) == mapFlaIndx.end())
 			continue;
-		indxDate = date - dateFirst;
+		indxDate = date - dateFirstTrans;
 		vecData[mapFlaIndx[flaName]][indxDate]++;
 	}
 	ss.clear();
 
-	//// fstreamÊä³öflavorÍ³¼Æ±í
-	//ofs.open("vecFlavor.txt");
-	//for (int i = 0; i < numFla; i++)
-	//{
-	//	ofs << arrFlaName[i] << ':' << '\t';
-	//	for (int j = 0; j < sumDate; j++)
-	//		ofs << vecData[i][j] << '\t';
-	//	ofs << std::endl;
-	//}
-	//ofs.close();
+	// é¢„æµ‹ input: äºŒç»´æ•°æ®å‘é‡, é¢„æµ‹å‘¨æœŸé•¿åº¦, é¢„æµ‹å¼€å§‹ä¸è®­ç»ƒç»“æŸä¹‹é—´é—´éš”æ—¥æœŸ, è™šæ‹ŸæœåŠ¡å™¨ç§ç±»æ•°, è™šæ‹ŸæœåŠ¡å™¨é¢„æµ‹ç»“æœå‘é‡ 
+	PredictAll(vecData, period, interval, numFla, arrFlaPre);
 
-	// Ô¤²â
-	//for (int i = 0; i < numFla; i++)
-	//	arrFlaPre[i] = arrData[i][numPeriod - 1];
-	PredictAll(vecData, period, numFla, arrFlaPre);
-
-	// ¼ÆËãÓĞĞ§FlavorÊı
-	numFlaValid = 0;
+	// è®¡ç®—æœ‰æ•ˆFlavoræ•°
+	numFlaPre = 0;
 	for (int i = 0; i < numFla; i++)
-		numFlaValid += arrFlaPre[i];
+		numFlaPre += arrFlaPre[i];
 
+	// åˆ†é…
+	for (int i = 0; i < MAX_PHY; i++)
+		for (int j = 0; j < numFla; j++)
+			res[i][j] = 0;
+	numPHY = distribution(sumCPU, sumMEM, numFla, target, arrFlaCPU, arrFlaMEM, arrFlaPre, res);
 
-//	// ·ÖÅä
-//	for (int i = 0; i < MAX_PHY; i++)
-//		for (int j = 0; j < numFla; j++)
-//			res[i][j] = 0;
-//	numPHY = distribution(sumCPU, sumMEM, numFla, target, arrFlaCPU, arrFlaMEM, arrFlaPre, res);
+	// å‡å»è¿‡å°æœåŠ¡å™¨
+	int numLastPHY = 0;
+	for (int i = 0; i < numFla; i++)
+		numLastPHY += res[numPHY - 1][i];
+	if (numLastPHY <= 5)
+	{
+		numPHY--;
+		numFlaPre -= numLastPHY;
+		for (int i = 0; i < numFla; i++)
+			arrFlaPre[i] -= res[numPHY][i];
+	}
 
-
-	double startT = 100.0;
-	double endT = 1.0;
-	double r = 0.9999;
-	SA SAModel = SA(startT, endT, r, sumCPU, sumMEM, numFla, target, arrFlaCPU, arrFlaMEM, arrFlaPre);
-	std::vector<std::vector<int>> res = SAModel.calculate();
-
-	numPHY = res.size();
-
-
-	// Êä³ö½á¹û
-	//ss << numFlaValid << std::endl;
-	//for (int i = 0; i < numFla; i++)
-	//	ss << arrFlaName[i] << " " << arrFlaPre[i] << std::endl;
-	//ss << std::endl;
-	//ss << numPHY << std::endl;
-	//for (int i = 0; i < numPHY; i++)
-	//{
-	//	ss << i + 1;
-	//	for (int j = 0; j < numFla; j++)
-	//		if (res[i][j] != 0)
-	//			ss << " " << arrFlaName[j] << " " << res[i][j];
-	//	ss << std::endl;
-	//}
-	//getline(ss, str);
-	//getline(ss, strResult);
-	//strResult += '\n';
-	//while (getline(ss, str))
-	//{
-	//	strResult += str;
-	//	strResult += '\n';
-	//}
-	//strResult.pop_back();
-
-	strResult += std::to_string(numFlaValid);
+	// ç”Ÿæˆç»“æœå­—ç¬¦ä¸²
+	strResult += std::to_string(numFlaPre);
 	strResult += '\n';
 	for (int i = 0; i < numFla; i++)
 	{
@@ -167,10 +132,10 @@ void predict_server(char * info[MAX_INFO_NUM], char * data[MAX_DATA_NUM], int da
 		strResult += '\n';
 	}
 
-	// ĞèÒªÊä³öµÄÄÚÈİ
-	char * result_file = (char *)"17\n\n0 8 0 20";
+	//// éœ€è¦è¾“å‡ºçš„å†…å®¹
+	//char * result_file = (char *)"17\n\n0 8 0 20";
 
-	// Ö±½Óµ÷ÓÃÊä³öÎÄ¼şµÄ·½·¨Êä³öµ½Ö¸¶¨ÎÄ¼şÖĞ(psÇë×¢Òâ¸ñÊ½µÄÕıÈ·ĞÔ£¬Èç¹ûÓĞ½â£¬µÚÒ»ĞĞÖ»ÓĞÒ»¸öÊı¾İ£»µÚ¶şĞĞÎª¿Õ£»µÚÈıĞĞ¿ªÊ¼²ÅÊÇ¾ßÌåµÄÊı¾İ£¬Êı¾İÖ®¼äÓÃÒ»¸ö¿Õ¸ñ·Ö¸ô¿ª)
+	// ç›´æ¥è°ƒç”¨è¾“å‡ºæ–‡ä»¶çš„æ–¹æ³•è¾“å‡ºåˆ°æŒ‡å®šæ–‡ä»¶ä¸­(psè¯·æ³¨æ„æ ¼å¼çš„æ­£ç¡®æ€§ï¼Œå¦‚æœæœ‰è§£ï¼Œç¬¬ä¸€è¡Œåªæœ‰ä¸€ä¸ªæ•°æ®ï¼›ç¬¬äºŒè¡Œä¸ºç©ºï¼›ç¬¬ä¸‰è¡Œå¼€å§‹æ‰æ˜¯å…·ä½“çš„æ•°æ®ï¼Œæ•°æ®ä¹‹é—´ç”¨ä¸€ä¸ªç©ºæ ¼åˆ†éš”å¼€)
 	write_result(strResult.c_str(), filename);
 
 	return;
